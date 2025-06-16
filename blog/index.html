@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog - Devin King</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="/">home</a>
+    <nav>
+      <a href="https://github.com/CyberSappers">github</a>
+      <a href="/aboutme.html">about</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1 class="title">Blog</h1>
+    <ul class="posts" id="post-list"></ul>
+  </div>
+
+  <script>
+    fetch('posts.json')
+      .then(res => res.json())
+      .then(posts => {
+        const ul = document.getElementById('post-list');
+        posts.forEach(post => {
+          const li = document.createElement('li');
+          li.classList.add('post');
+          const link = document.createElement('a');
+          link.href = post.filename;
+          link.textContent = `${post.title} - ${post.date}`;
+          li.appendChild(link);
+          ul.appendChild(li);
+        });
+      });
+  </script>
+<script data-goatcounter="https://cybersappers.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
+

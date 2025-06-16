@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Navigating the IT/OT Divide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/jpg" href="../../images/favicon.jpg">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="/">home</a>
+    <nav>
+      <a href="https://github.com/CyberSappers">github</a>
+      <a href="/aboutme.html">about</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1 class="title">Navigating the IT/OT
+Divide<br><span class="subtitle" style="font-size: 0.50em;">2025-06-08</span></h1>
+    <div class="content">
+      <img src="../images/it-ot-separation.png" alt="IT/OT Separation Image">
+      <p>In maritime environments, people often hear “<em>IT/OT
+      separation</em>” tossed around like a buzzword. But many outside
+      of cybersecurity don’t fully grasp what it means or why it matters
+      so much. This isn’t just a technical preference. It’s a
+      foundational safety requirement.</p>
+      <hr />
+      <h3 id="understanding-the-difference">Understanding the
+      Difference</h3>
+      <ul>
+      <li><p>IT (Information Technology) deals with email, internet,
+      software, business systems — these are the digital tools used to
+      manage operations and communication.</p></li>
+      <li><p>OT (Operational Technology) controls the ship itself —
+      navigation, propulsion, engine systems, safety equipment,
+      sensors.</p></li>
+      </ul>
+      <p>They serve two very different purposes. One supports business.
+      The other keeps the vessel operational and safe.</p>
+      <hr />
+      <h3 id="why-they-must-be-separated">Why They Must Be
+      Separated</h3>
+      <ol type="1">
+      <li><p><strong>To Contain Risk</strong> If someone clicks a bad
+      link in an email or plugs in a compromised USB on the IT side, it
+      shouldn’t be able to affect navigation systems. Keeping these
+      environments separate limits how far a problem can
+      spread.</p></li>
+      <li><p><strong>To Prioritize Safety</strong> Business systems can
+      go offline without immediate danger. OT systems can’t. If a safety
+      control fails or a navigation system is tampered with, the
+      consequences can be physical and immediate. The separation ensures
+      business-side problems don’t put lives at risk.</p></li>
+      <li><p><strong>To Respect Different Needs</strong> IT changes
+      often. OT changes slowly — often only during drydock or major
+      service windows. They’re built with different priorities and
+      update cycles. Putting them together creates unnecessary strain
+      and potential instability.</p></li>
+      <li><p><strong>To Protect Against Mistakes</strong> Most cyber
+      incidents come from human error, such as phishing. The more
+      overlap between these two worlds, the easier it is for someone to
+      accidentally cause a problem they didn’t understand, or provide a
+      clear entry point for attackers. Separation provides a safety
+      buffer.</p></li>
+      </ol>
+      <hr />
+      <h3 id="what-awareness-looks-like">What Awareness Looks Like</h3>
+      <ul>
+      <li><p>Recognize that networks on a vessel are very different.
+      Some networks run business tools, others steer the ship or controls navigation.</p></li>
+      <li><p>Understand that convenience often comes at a cost. Easy
+      file sharing or internet access from bridged systems can introduce
+      unseen risks.</p></li>
+      <li><p>Support clear policies that restrict cross-connections
+      unless absolutely necessary, and only with proper
+      oversight.</p></li>
+      <li><p>Ask questions when new systems are added: Does this touch
+      OT? Is there separation?</p></li>
+      </ul>
+      <hr />
+      <h3 id="how-its-done">How It’s Done</h3>
+      <p>Even without diving deep into technical diagrams, there are a
+      few foundational principles that support proper IT/OT
+      separation:</p>
+      <ul>
+      <li><p><strong>Network Segmentation</strong> Use VLANs or
+      physically separate networks to isolate IT systems from OT
+      systems. This isn’t just about labeling - it requires enforcement
+      through firewalls or access control policies that prevent direct
+      communication except for approved, logged pathways.</p></li>
+      <li><p><strong>Data Aggregation Points</strong> Instead of pulling
+      data directly from an OT device, route information through a
+      central, read-only collection point. This limits exposure and
+      ensures all data flows can be monitored and controlled.</p></li>
+      <li><p><strong>Controlled Interfaces</strong> Any system that must
+      connect both worlds (e.g., for monitoring or convenience) should be tightly
+      managed. Use hardened jump boxes or gateways with strict access
+      rules and full logging.</p></li>
+      <li><p><strong>Logging and Alerting</strong> Monitor all access to
+      OT networks. Alerts should be configured for unexpected traffic
+      patterns, failed login attempts, or system changes. Visibility is
+      critical - you can’t defend what you can’t see.</p></li>
+      <li><p><strong>No Direct Internet on OT Systems</strong>
+      Operational systems should never have unfiltered internet access.
+      This removes the primary threat vector for most attacks.</p></li>
+      </ul>
+      <p>The goal isn’t complexity, it’s control. Establish boundaries
+      early, and enforce them consistently.</p>
+      <hr />
+      <h3 id="final-thought">Final Thought</h3>
+      <p>This isn’t just a cybersecurity issue. It’s a <strong>safety
+      and operational</strong> continuity issue. Keeping IT and OT
+      separate isn’t paranoia - it’s discipline. And everyone on board,
+      from leadership to crew, needs to understand the difference.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p style="text-align:center; font-size: 0.9em; color: #666;">
+      &copy; Devin King – <a href="/">Home</a> | <a href="/blog/">Blog Index</a>
+    </p>
+  </footer>
+<script data-goatcounter="https://cybersappers.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
+
